@@ -2,7 +2,7 @@
 name: FivePD Game Ban
 about: Log FivePD Game Bans here. Administration should directly commit if they're
   aware of what they're doing.
-title: XXXX-XXXX (BAN ID) | PLAYER NA,E
+title: XXXX-XXXX (BAN ID) | PLAYER NAME
 labels: Needs Review
 assignees: RossMdevs
 
