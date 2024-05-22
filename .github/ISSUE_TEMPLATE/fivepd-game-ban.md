@@ -9,4 +9,9 @@ assignees: ''
 ---
 
 Please include the following:
-- Incident ID (Warning/Ban ID issued by TX [Typically XXXX-XXXX])
+- Incident ID:
+(Warning/Ban ID issued by TX [Typically XXXX-XXXX])
+- TXAdmin Player Name:
+(It will show under players in TxAdmin)
+- Players FiveM License:
+(TXAdmin > Players > Click Player > Licenses)
