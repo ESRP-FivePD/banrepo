@@ -1,141 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>ESRP FivePD - Conduct Search</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Player Search</title>
 <style>
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f1f1f1;
-  margin: 0;
-  padding: 0;
-}
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f3f3;
+    margin: 0;
+    padding: 0;
+  }
 
-.header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
+  .header {
+    background-color: #6c757d; /* Modern gray */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 0 0 8px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.container {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 0 20px;
-}
+  .logo {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 10px;
+  }
 
-img {
-  max-width: 100%;
-}
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
 
-input[type="text"] {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 12px;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
+  input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
+  input[type="text"]:focus {
+    border-color: #6c757d; /* Modern gray */
+    outline: none;
+  }
 
-table th, table td {
-  padding: 12px;
-  border-bottom: 1px solid #ddd;
-}
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
 
-table th {
-  background-color: #333;
-  color: #fff;
-  text-align: left;
-}
+  table th, table td {
+    padding: 12px;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+    font-size: 14px;
+  }
 
-table tr:hover {
-  background-color: #f2f2f2;
-}
+  table th {
+    background-color: #6c757d; /* Modern gray */
+    color: #fff;
+    font-weight: bold;
+  }
 
-.footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
+  table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
 
-.disclaimer {
-  background-color: #f44336;
-  color: #fff;
-  padding: 10px;
-  margin-top: 20px;
-  text-align: center;
-}
+  table tr:hover {
+    background-color: #f2f2f2;
+  }
+
+  .disclaimer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+  }
 </style>
 </head>
 <body>
 
 <div class="header">
-  <h1>ESRP FivePD - Conduct Search</h1>
+  <img src="https://your-mom-is-so-fat-we-couldnt-fit-her-in-this-doma.in/xgk4ejoq.png" alt="Logo" class="logo"> <!-- Placeholder logo -->
+  <h1>FivePD Disciplinary Portal</h1>
 </div>
 
 <div class="container">
-  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Insert FiveM Name. This IS NOT your in-character name." title="Type in a name">
+  <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search for player data.." title="Type in any data">
 
-  <table id="myTable">
+  <table id="playerTable">
     <thead>
       <tr>
-        <th>Last Known Name</th>
+        <th>Player Name</th>
         <th>Type</th>
-        <th>Status | Duration</th>
+        <th>Duration</th>
         <th>License</th>
         <th>Incident ID</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>No Logged Bans or warnings.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>John Doe</td>
+        <td>No</td>
+        <td>30 days</td>
+        <td>115e54f4615a4febbda28eee4fb87c95d73d224e</td>
+        <td>XAM-123</td>
       </tr>
+      <tr>
+        <td>Jane Smith</td>
+        <td>Warning</td>
+        <td>N/A</td>
+        <td>115e54f4615a4febbda28eee4fb87c95d73d224e</td>
+        <td>XAM-125</td>
+      </tr>
+      <!-- Add more rows as needed -->
     </tbody>
   </table>
 
   <div class="disclaimer">
-    <p>This website is for informational purposes only. All submissions are subject to manual review by ESRP FivePD Staff. Any discrepancies should be reported through the appropriate channels.</p>
+    <p>This website is for informational purposes only. It is regularly updated and manually reviewed by ESRP FivePD Board of Directors.</p>
   </div>
 </div>
 
-<div class="footer">
-  <p>© 2024 ESRP FivePD. All Rights Reserved.</p>
-</div>
-
 <script>
-function myFunction() {
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("myInput");
+function searchTable() {
+  var input, filter, table, tr, td, i, j, txtValue;
+  input = document.getElementById("searchInput");
   filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
+  table = document.getElementById("playerTable");
   tr = table.getElementsByTagName("tr");
+
   for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }       
+    for (j = 0; j < tr[i].cells.length; j++) {
+      td = tr[i].getElementsByTagName("td")[j];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+          break;
+        } else {
+          tr[i].style.display = "none";
+        }
+      }       
+    }
   }
 }
 </script>
 
 </body>
 </html>
-
