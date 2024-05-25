@@ -1,70 +1,108 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>ESRP FivePD - Conduct Search</title>
 <style>
-* {
-  box-sizing: border-box;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+  margin: 0;
+  padding: 0;
 }
 
-#myInput {
-  background-image: url('searchicon.png');
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+img {
+  max-width: 100%;
+}
+
+input[type="text"] {
   width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-}
-
-#myTable {
-  border-collapse: collapse;
-  width: 100%;
-  border: 1px solid #ddd;
-  font-size: 18px;
-}
-
-#myTable th, #myTable td {
-  text-align: left;
   padding: 12px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-#myTable tr {
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 12px;
   border-bottom: 1px solid #ddd;
 }
 
-#myTable tr.header, #myTable tr:hover {
-  background-color: #f1f1f1;
+table th {
+  background-color: #333;
+  color: #fff;
+  text-align: left;
+}
+
+table tr:hover {
+  background-color: #f2f2f2;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 </style>
 </head>
 <body>
 
-<center><img src="https://your-mom-is-so-fat-we-couldnt-fit-her-in-this-doma.in/pwqihvhl.png"></img>
-<p>Each submission is manually reviewed by ESRP FivePD Staff. Please use the Forum to appeal or report a discrepancy.</p>
-</center>
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Insert FiveM Name. This IS NOT your in-character name." title="Type in a name">
+<div class="header">
+  <h1>ESRP FivePD - Conduct Search</h1>
+</div>
 
-<table id="myTable">
-  <tr class="header">
-    <th style="width:32%;">Last Known Name</th>
-    <th style="width:17%;">Type</th>
-    <th style="width:17%;">Status | Duration</th>
-    <th style="width:17%;">License</th>
-    <th style="width:17%;">Incident ID</th>
-  </tr>
-  <tr>
-    <td><p>No Active Bans</p></td>
-    <td><p></p></td>
-    <td><p><p></td>
-    <td><p><p></td>
-    <td><p><p></td>
-  </tr>
+<div class="container">
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Insert FiveM Name. This IS NOT your in-character name." title="Type in a name">
 
-  </tr>
-</table>
+  <table id="myTable">
+    <thead>
+      <tr>
+        <th>Last Known Name</th>
+        <th>Type</th>
+        <th>Status | Duration</th>
+        <th>License</th>
+        <th>Incident ID</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>No Active Bans</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="footer">
+  <p>© 2024 ESRP FivePD. All Rights Reserved. <br><i>All bans are manually reviewed by ESRP's Board of Directors, please contact a member of staff if you notice any issues</i> </i></p>
+</div>
 
 <script>
 function myFunction() {
